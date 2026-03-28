@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clover OAuth Callback</title>
+</head>
+<body>
+    <h2>Clover OAuth Callback</h2>
+    <p id="message">Waiting for authorization code...</p>
+
+    <script>
+        // Read the 'code' query parameter from the URL
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+
+        const messageEl = document.getElementById('message');
+
+        if (code) {
+            messageEl.innerHTML = `
+                <p>Authorization successful!</p>
+                <p><b>Code:</b> ${code}</p>
+                <p>You can now close this page and copy the code to your console application.</p>
+            `;
+
+
+        } else {
+            messageEl.innerHTML = `<p style="color:red;">No authorization code received. Please retry the Clover authorization process.</p>`;
+        }
+    </script>
+</body>
+</html>
