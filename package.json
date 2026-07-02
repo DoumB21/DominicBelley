@@ -1,0 +1,7 @@
+{
+  "name": "dominicbelley-site",
+  "private": true,
+  "engines": {
+    "node": "20.x"
+  }
+}
