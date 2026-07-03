@@ -1,9 +1,8 @@
 {
-  "redirects": [
+  "rewrites": [
     {
       "source": "/clover/setup",
-      "destination": "https://sandbox.dev.clover.com/oauth/v2/authorize?client_id=64ZNT0RZQF2ME",
-      "permanent": false
+      "destination": "/api/clover-launch"
     }
   ]
 }
